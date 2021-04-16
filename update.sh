@@ -12,7 +12,7 @@ git clone https://github.com/Agoric/agoric-sdk -b agorictest-9 \
 && ag-chain-cosmos version \
 && cd ~/agoric \
 && curl https://testnet.agoric.net/network-config > chain.json \
-&& chainName=`jq -r .chainName < chain` \
+&& chainName=`jq -r .chainName < chain.json` \
 && ag-chain-cosmos unsafe-reset-all \
 && curl https://testnet.agoric.net/genesis.json > $HOME/.ag-chain-cosmos/config/genesis.json \
 && peers=$(jq '.peers | join(",")' < chain.json) \
