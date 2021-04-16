@@ -2,8 +2,8 @@
 
 systemctl stop ag-chain-cosmos.service \
 && cd ~/agoric \
-rm -rf agoric-sdk; \
-&& git clone https://github.com/Agoric/agoric-sdk -b agorictest-9 \
+&& rm -rf agoric-sdk; \
+git clone https://github.com/Agoric/agoric-sdk -b agorictest-9 \
 && cd agoric-sdk \
 && yarn install \
 && yarn build \
